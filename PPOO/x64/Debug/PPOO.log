@@ -1,0 +1,4 @@
+﻿  GererPersonnel.cpp
+C:\Users\Maxou\source\repos\PPOO\PPOO\GererPersonnel.cpp(72,48): warning C4965: boxing implicite de l'entier 0 ; utilisez nullptr ou effectuez un cast explicite
+  AdminPage.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+  PPOO.vcxproj -> C:\Users\Maxou\source\repos\PPOO\x64\Debug\PPOO.exe

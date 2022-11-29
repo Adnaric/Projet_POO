@@ -1,0 +1,6 @@
+C:\Users\Maxou\source\repos\PPOO\PPOO\x64\Debug\PPOO.vcxproj.AssemblyReference.cache
+C:\Users\Maxou\source\repos\PPOO\PPOO\x64\Debug\PPOO.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Maxou\source\repos\PPOO\PPOO\x64\Debug\PPOO.MyForm.resources
+C:\Users\Maxou\source\repos\PPOO\PPOO\x64\Debug\PPOO.vcxproj.GenerateResource.cache
+C:\Users\Maxou\source\repos\PPOO\PPOO\x64\Debug\PPOO.AdminPage.resources
+C:\Users\Maxou\source\repos\PPOO\PPOO\x64\Debug\PPOO.GererPersonnel.resources
