@@ -1,4 +1,4 @@
-#pragma once
+#include "CLservices.h"
 
 namespace POO {
 
@@ -71,7 +71,8 @@ namespace POO {
 		System::Windows::Forms::Button^ button3;
 		System::Windows::Forms::Button^ button4;
 		System::Windows::Forms::TextBox^ textBox16;
-
+		System::Windows::Forms::Button^ button5;
+		NS_Comp_Svc::CLservices^ oSvc;
 		
 
 		System::ComponentModel::Container ^components;
@@ -79,8 +80,9 @@ namespace POO {
 		#pragma region Windows Form Designer generated code
 		void InitializeComponent(void);
 		#pragma endregion
-		System::Void PersonnelPage_Load(System::Object^ sender, System::EventArgs^ e);
+		System::Void PersonnelPage_Load(System::Object^ sender, System::EventArgs^ e);		
+		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
 		
-		System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+		System::Void monthCalendar1_DateChanged(System::Object^ sender, System::Windows::Forms::DateRangeEventArgs^ e);
 	};
 }

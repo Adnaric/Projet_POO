@@ -79,11 +79,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalUsingDirectories>$(VC_IncludePath);$(WindowsSDK_IncludePath);</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>WinMain</EntryPointSymbol>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -116,6 +118,9 @@
   <ItemGroup>
     <ClCompile Include="AdminPage.cpp" />
     <ClCompile Include="AuthentificationPage.cpp" />
+    <ClCompile Include="CLcad.cpp" />
+    <ClCompile Include="CLmap.cpp" />
+    <ClCompile Include="CLservices.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PersonnelPage.cpp" />
   </ItemGroup>
@@ -133,6 +138,9 @@
     <ClInclude Include="AuthentificationPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CLcad.h" />
+    <ClInclude Include="CLmapTB.h" />
+    <ClInclude Include="CLservices.h" />
     <ClInclude Include="PersonnelPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
