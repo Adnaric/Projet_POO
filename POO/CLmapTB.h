@@ -8,17 +8,7 @@ namespace NS_Comp_Mappage
         int Id;
         System::String^ nom;
         System::String^ prenom;
-    public:
-        virtual System::String^ Select(void);
-        virtual System::String^ Insert(void);
-        virtual System::String^ Delete(void);
-        virtual System::String^ Update(void);
-        virtual void setId(int);
-        virtual void setNom(System::String^);
-        virtual void setPrenom(System::String^);
-        virtual int getId(void);
-        virtual System::String^ getNom(void);
-        virtual System::String^ getPrenom(void);
+        
     };
 
     ref class CLmapPersonnel : public CLmapTB {
@@ -32,10 +22,10 @@ namespace NS_Comp_Mappage
         System::String^ ville;
         int code_postal;
     public:
-        System::String^ Select_pers(void);
-        System::String^ Insert_pers(void);
-        System::String^ Delete_pers(void);
-        System::String^ Update_pers(void);
+        System::String^ Select(void);
+        System::String^ Insert(void);
+        System::String^ Delete(void);
+        System::String^ Update(void);
         void setNom_pers(System::String^);
         void setPrenom_pers(System::String^);
         void set_superieur(int);
