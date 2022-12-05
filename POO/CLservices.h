@@ -11,7 +11,5 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLmapTB^ oMappTB;
 	public:
 		CLservices(void);
-		System::Data::DataSet^ selectionnerToutesLesPersonnes(System::String^);
-		void ajouterUnePersonne(System::String^, System::String^);
 	};
 }

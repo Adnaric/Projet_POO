@@ -117,6 +117,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AdminPage.cpp" />
+    <ClCompile Include="ArticlePage.cpp" />
     <ClCompile Include="AuthentificationPage.cpp" />
     <ClCompile Include="CLcad.cpp" />
     <ClCompile Include="CLmap.cpp" />
@@ -135,6 +136,9 @@
     <ClInclude Include="AdminPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ArticlePage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="AuthentificationPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -148,6 +152,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArticlePage.resx">
+      <DependentUpon>ArticlePage.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AuthentificationPage.resx">
       <DependentUpon>AuthentificationPage.h</DependentUpon>

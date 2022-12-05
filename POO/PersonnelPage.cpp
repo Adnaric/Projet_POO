@@ -77,7 +77,6 @@ POO::PersonnelPage::PersonnelPage(void)
 	this->tabControl1->SelectedIndex = 0;
 	this->tabControl1->Size = System::Drawing::Size(776, 469);
 	this->tabControl1->TabIndex = 0;
-	
 	this->Controls->Add(this->tabControl1);
 	this->tabControl1->Controls->Add(this->tabPage1);
 	this->tabControl1->Controls->Add(this->tabPage2);
@@ -510,7 +509,6 @@ void POO::PersonnelPage::InitializeComponent(void)
 	// 
 	this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 	this->ClientSize = System::Drawing::Size(800, 500);
-	this->Controls->Add(this->tabControl1);
 	this->Name = L"PersonnelPage";
 	this->Text = L"PersonnelPage";
 	this->Load += gcnew System::EventHandler(this, &PersonnelPage::PersonnelPage_Load);
