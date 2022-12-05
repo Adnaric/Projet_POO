@@ -34,5 +34,6 @@ namespace POO {
 		System::Void AdminPage_Load(System::Object^ sender, System::EventArgs^ e);
 		System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
 		System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 	};
 }

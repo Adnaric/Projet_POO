@@ -14,23 +14,58 @@ namespace POO {
 	public:
 		ArticlePage(void);
 
-
 	protected:
 		~ArticlePage();
-	private: System::Windows::Forms::TabControl^ tabControl1;
-	protected:
-	private: System::Windows::Forms::TabPage^ tabPage1;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::TabPage^ tabPage2;
-	private: System::Windows::Forms::Button^ button2;
+		
+	private: 
+		System::Windows::Forms::TabControl^ tabControl1;
+		
+		System::Windows::Forms::TabPage^ tabPage1;
+		System::Windows::Forms::TabPage^ tabPage2;
+		System::Windows::Forms::TabPage^ tabPage3;
+		System::Windows::Forms::TabPage^ tabPage4;
 
-	private:
+		System::Windows::Forms::Button^ button1;
+		System::Windows::Forms::Button^ button2;
+		System::Windows::Forms::Button^ button3;
+		System::Windows::Forms::Button^ button5;
+		System::Windows::Forms::Button^ button4;
+		
+		System::Windows::Forms::DataGridView^ dataGridView1;
+		System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+		System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+		System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+		System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+		
+		System::Windows::Forms::RichTextBox^ richTextBox1;
+		System::Windows::Forms::RichTextBox^ richTextBox2;
+		
+		System::Windows::Forms::NumericUpDown^ numericUpDown1;
+		System::Windows::Forms::NumericUpDown^ numericUpDown2;
+		System::Windows::Forms::NumericUpDown^ numericUpDown4;
+		System::Windows::Forms::NumericUpDown^ numericUpDown3;
+		
+		System::Windows::Forms::TextBox^ textBox1;
+		System::Windows::Forms::TextBox^ textBox2;
+		System::Windows::Forms::TextBox^ textBox3;
+
+		System::Windows::Forms::Label^ label1;
+		System::Windows::Forms::Label^ label2;
+		System::Windows::Forms::Label^ label3;
+		System::Windows::Forms::Label^ label4;
+		System::Windows::Forms::Label^ label5;
+		System::Windows::Forms::Label^ label6;
+		System::Windows::Forms::Label^ label7;
+		System::Windows::Forms::Label^ label8;
+		System::Windows::Forms::Label^ label9;		
+		System::Windows::Forms::Label^ label10;
+		
 		System::ComponentModel::Container ^components;
-
+		
 		#pragma region Windows Form Designer generated code
 		void InitializeComponent(void);
 		#pragma endregion
 		System::Void ArticlePage_Load(System::Object^ sender, System::EventArgs^ e);
-		
+		System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
 	};
 }

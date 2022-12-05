@@ -1,6 +1,7 @@
 #include "AdminPage.h"
 #include "AuthentificationPage.h"
 #include "PersonnelPage.h"
+#include "ArticlePage.h"
 
 void POO::AdminPage::InitializeComponent(void)
 {
@@ -69,6 +70,7 @@ POO::AdminPage::AdminPage(void)
 	this->button3->TabIndex = 3;
 	this->button3->Text = L"Gerer Article";
 	this->button3->UseVisualStyleBackColor = true;
+	this->button3->Click += gcnew System::EventHandler(this, &AdminPage::button3_Click);
 	this->Controls->Add(this->button3);
 }
 
@@ -94,6 +96,15 @@ System::Void POO::AdminPage::button1_Click(System::Object^ sender, System::Event
 
 	PersonnelPage^ personnelPage = gcnew PersonnelPage();
 	personnelPage->ShowDialog();
+
+	this->Close();
+}
+
+System::Void POO::AdminPage::button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+
+	ArticlePage^ articlePage = gcnew ArticlePage();
+	articlePage->ShowDialog();
 
 	this->Close();
 }
