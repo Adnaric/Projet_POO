@@ -42,6 +42,9 @@
     <ClCompile Include="ArticlePage.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="ClientPage.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AuthentificationPage.h">
@@ -63,6 +66,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="ArticlePage.h">
+      <Filter>Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientPage.h">
       <Filter>Views</Filter>
     </ClInclude>
   </ItemGroup>

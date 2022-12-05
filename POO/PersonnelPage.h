@@ -73,7 +73,10 @@ namespace POO {
 		System::Windows::Forms::TextBox^ textBox16;
 		System::Windows::Forms::Button^ button5;
 		NS_Comp_Svc::CLservices^ oSvc;
-		
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Label^ label20;
+	private: System::Windows::Forms::Label^ label21;
+
 
 		System::ComponentModel::Container ^components;
 
@@ -84,5 +87,7 @@ namespace POO {
 		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
 		
 		System::Void monthCalendar1_DateChanged(System::Object^ sender, System::Windows::Forms::DateRangeEventArgs^ e);
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }
