@@ -165,7 +165,7 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->button1->TabIndex = 0;
 	this->button1->Text = L"Ajouter le personnel";
 	this->button1->UseVisualStyleBackColor = true;
-	this->button6->Click += gcnew System::EventHandler(this, &PersonnelPage::button1_Click);
+	this->button1->Click += gcnew System::EventHandler(this, &PersonnelPage::button1_Click);
 	// 
 	// label1
 	// 

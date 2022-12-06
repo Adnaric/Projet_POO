@@ -2,7 +2,7 @@
 
 System::String^ NS_Comp_Mappage::CLmapPersonnel::Select()
 {
-    return "SELECT personnel_id, humain_nom, humain_prenom, personnel_id_1, adresse_numero, adresse_rue, ville_name, ville_code_postal, calendrier_date  FROM [projetpoo2].[dbo].[humain], [projetpoo2].[dbo].[ADRESSE], [projetpoo2].[dbo].[personnel], [projetpoo2].[dbo].[calendrier], [projetpoo2].[dbo].[VILLE] WHERE PERSONNEL.calendrier_id = CALENDRIER.calendrier_id AND PERSONNEL.adresse_id = ADRESSE.adresse_id AND PERSONNEL.humain_id = HUMAIN.humain_id AND ADRESSE.ville_id = VILLE.ville_id";
+    return "SELECT personnel_id AS Id, humain_nom AS Nom, humain_prenom AS Prenom, personnel_id_1 AS Superieur, CONCAT(adresse_numero, ' ', adresse_rue,' ', ville_name, ' ', ville_code_postal) AS Adresse, calendrier_date AS 'Date embauche'  FROM [projetpoo2].[dbo].[humain], [projetpoo2].[dbo].[ADRESSE], [projetpoo2].[dbo].[personnel], [projetpoo2].[dbo].[calendrier], [projetpoo2].[dbo].[VILLE] WHERE PERSONNEL.calendrier_id = CALENDRIER.calendrier_id AND PERSONNEL.adresse_id = ADRESSE.adresse_id AND PERSONNEL.humain_id = HUMAIN.humain_id AND ADRESSE.ville_id = VILLE.ville_id";
 }
 System::String^ NS_Comp_Mappage::CLmapPersonnel::Insert(void)
 {
