@@ -26,12 +26,6 @@ namespace POO {
 		System::Windows::Forms::TabPage^ tabPage2;
 		System::Windows::Forms::TabPage^ tabPage3;
 		System::Windows::Forms::TabPage^ tabPage4;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
 		System::Windows::Forms::MonthCalendar^ monthCalendar1;
 		System::Windows::Forms::Label^ label4;
 		System::Windows::Forms::Label^ label3;
