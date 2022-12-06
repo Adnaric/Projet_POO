@@ -121,6 +121,7 @@
     <ClCompile Include="AuthentificationPage.cpp" />
     <ClCompile Include="CLcad.cpp" />
     <ClCompile Include="CLmap.cpp" />
+    <ClCompile Include="CLmapTB.cpp" />
     <ClCompile Include="CLservices.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PersonnelPage.cpp" />
