@@ -48,7 +48,7 @@
     <ClCompile Include="StatsPage.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CommandePage.cpp">
+    <ClCompile Include="PagePersonnel.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -78,9 +78,6 @@
       <Filter>Views</Filter>
     </ClInclude>
     <ClInclude Include="StatsPage.h">
-      <Filter>Views</Filter>
-    </ClInclude>
-    <ClInclude Include="CommandePage.h">
       <Filter>Views</Filter>
     </ClInclude>
   </ItemGroup>

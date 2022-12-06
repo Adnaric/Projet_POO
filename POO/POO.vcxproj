@@ -125,6 +125,7 @@
     <ClCompile Include="CLservices.cpp" />
     <ClCompile Include="CommandePage.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PagePersonnel.cpp" />
     <ClCompile Include="PersonnelPage.cpp" />
     <ClCompile Include="StatsPage.cpp" />
   </ItemGroup>
@@ -151,7 +152,7 @@
     </ClInclude>
     <ClInclude Include="CLmapTB.h" />
     <ClInclude Include="CLservices.h" />
-    <ClInclude Include="CommandePage.h">
+    <ClInclude Include="PagePersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PersonnelPage.h">
@@ -173,9 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientPage.resx">
       <DependentUpon>ClientPage.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandePage.resx">
-      <DependentUpon>CommandePage.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonnelPage.resx">
       <DependentUpon>PersonnelPage.h</DependentUpon>

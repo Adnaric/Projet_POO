@@ -1,5 +1,6 @@
 #include "AuthentificationPage.h"
 #include "AdminPage.h"
+#include "PagePersonnel.h"
 
 POO::AuthentificationPage::AuthentificationPage(void)
 {
@@ -31,6 +32,7 @@ POO::AuthentificationPage::AuthentificationPage(void)
 	this->button2->Text = L"Personnel";
 	this->button2->UseVisualStyleBackColor = true;
 	this->button2->Click += gcnew System::EventHandler(this, &AuthentificationPage::button2_Click);
+
 	this->Controls->Add(this->button2);
 	// 
 	// label1
@@ -76,6 +78,14 @@ void POO::AuthentificationPage::button1_Click(System::Object^ sender, System::Ev
 	adminPage->ShowDialog();
 	this->Close();
 }
-
+void POO::AuthentificationPage::button2_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	this->Hide();
+	PagePersonnel^ pagepersonnel = gcnew PagePersonnel();
+	pagepersonnel->ShowDialog();
+	this->Close();
+}
 System::Void POO::AuthentificationPage::AuthentificationPage_Load(System::Object^ sender, System::EventArgs^ e)
-{}
+{
+
+}
