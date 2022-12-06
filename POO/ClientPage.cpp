@@ -20,13 +20,7 @@ void POO::ClientPage::InitializeComponent(void)
 	this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 	this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 	this->button2 = (gcnew System::Windows::Forms::Button());
-	this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-	this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-	this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-	this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-	this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-	this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-	this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+	this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView()); 
 	this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 	this->button3 = (gcnew System::Windows::Forms::Button());
 	this->textBox10 = (gcnew System::Windows::Forms::TextBox());
@@ -140,14 +134,11 @@ void POO::ClientPage::InitializeComponent(void)
 	this->button2->TabIndex = 1;
 	this->button2->Text = L"Raffraichir";
 	this->button2->UseVisualStyleBackColor = true;
+	this->button2->Click += gcnew System::EventHandler(this, &ClientPage::button2_Click);
 	// 
 	// dataGridView1
 	// 
 	this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-	this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
-		this->Column1,
-			this->Column2, this->Column3, this->Column4, this->Column5, this->Column6
-	});
 	this->dataGridView1->Location = System::Drawing::Point(16, 20);
 	this->dataGridView1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 	this->dataGridView1->Name = L"dataGridView1";
@@ -155,48 +146,7 @@ void POO::ClientPage::InitializeComponent(void)
 	this->dataGridView1->Size = System::Drawing::Size(824, 482);
 	this->dataGridView1->TabIndex = 0;
 	this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ClientPage::dataGridView1_CellContentClick);
-	// 
-	// Column1
-	// 
-	this->Column1->HeaderText = L"Id";
-	this->Column1->MinimumWidth = 6;
-	this->Column1->Name = L"Column1";
-	this->Column1->Width = 125;
-	// 
-	// Column2
-	// 
-	this->Column2->HeaderText = L"Nom";
-	this->Column2->MinimumWidth = 6;
-	this->Column2->Name = L"Column2";
-	this->Column2->Width = 125;
-	// 
-	// Column3
-	// 
-	this->Column3->HeaderText = L"Prenom";
-	this->Column3->MinimumWidth = 6;
-	this->Column3->Name = L"Column3";
-	this->Column3->Width = 125;
-	// 
-	// Column4
-	// 
-	this->Column4->HeaderText = L"Date de naissance";
-	this->Column4->MinimumWidth = 6;
-	this->Column4->Name = L"Column4";
-	this->Column4->Width = 125;
-	// 
-	// Column5
-	// 
-	this->Column5->HeaderText = L"Adresse de facturation";
-	this->Column5->MinimumWidth = 6;
-	this->Column5->Name = L"Column5";
-	this->Column5->Width = 125;
-	// 
-	// Column6
-	// 
-	this->Column6->HeaderText = L"Adresse de livraison";
-	this->Column6->MinimumWidth = 6;
-	this->Column6->Name = L"Column6";
-	this->Column6->Width = 125;
+	
 	// 
 	// tabPage2
 	// 
@@ -828,3 +778,13 @@ void  POO::ClientPage::button1_Click(System::Object^ sender, System::EventArgs^ 
 	
 	this->Close();
 }
+
+
+System::Void POO::ClientPage::button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oDs = this->oSvc->selection_tout_client("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+	this->dataGridView1->Refresh();
+}
+
+

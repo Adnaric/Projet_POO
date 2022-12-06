@@ -1,5 +1,5 @@
 #pragma once
-
+#include "CLservices.h"
 namespace POO {
 
 	using namespace System;
@@ -86,7 +86,10 @@ namespace POO {
 	private: System::Windows::Forms::TabPage^ tabPage4;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::TextBox^ textBox22;
-	private: System::Windows::Forms::Label^ label28;
+	private: System::Windows::Forms::Label^ label28; 
+	private: NS_Comp_Svc::CLservices^ oSvc;
+	private: System::Data::DataSet^ oDs;
+
 
 	protected:
 
@@ -103,5 +106,6 @@ namespace POO {
 	
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
+		  System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
 	};
 }

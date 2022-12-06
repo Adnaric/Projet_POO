@@ -10,7 +10,7 @@ System::String^ NS_Comp_Mappage::CLmapPersonnel::Insert(void)
 }
 System::String^ NS_Comp_Mappage::CLmapPersonnel::Delete(void)
 {
-    return "";
+    return "DELETE FROM PERSONNEL WHERE personnel_id = "+this->id_personnel;
 }
 System::String^ NS_Comp_Mappage::CLmapPersonnel::Update(void)
 {
@@ -58,6 +58,13 @@ void NS_Comp_Mappage::CLmapPersonnel::set_code_postal(int code)
     this->code_postal = code;
 }
 
+void NS_Comp_Mappage::CLmapPersonnel::set_personnel(int id)
+{
+    this->id_personnel = id;
+}
+
+
+
 System::String^ NS_Comp_Mappage::CLmapPersonnel::getNom_pers(void)
 {
     return this->nom;
@@ -96,6 +103,11 @@ System::String^ NS_Comp_Mappage::CLmapPersonnel::get_ville(void)
 int NS_Comp_Mappage::CLmapPersonnel::get_code_postal(void)
 {
     return this->code_postal;
+}
+
+int NS_Comp_Mappage::CLmapPersonnel::get_id_personnel(void)
+{
+    return this->id_personnel;
 }
 
 

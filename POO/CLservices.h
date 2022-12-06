@@ -22,5 +22,6 @@ namespace NS_Comp_Svc
 		void ajouter_client(System::String^, System::String^, System::String^, int, System::String^, System::String^, int, int, System::String^, System::String^, int);
 		void ajouter_article(float, System::String^, System::String^, int);
 		void ajouter_commande(int, System::String^, System::String^, System::String^, int, System::String^, int);
+		void supprimer_personnel(int id_perso);
 	};
 }
