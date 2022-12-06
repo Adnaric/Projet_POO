@@ -20,10 +20,6 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 	this->button5 = (gcnew System::Windows::Forms::Button());
 	this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-	this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-	this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-	this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-	this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 	this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 	this->button4 = (gcnew System::Windows::Forms::Button());
 	this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
@@ -70,7 +66,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->tabControl1->Controls->Add(this->tabPage4);
 	this->tabControl1->Cursor = System::Windows::Forms::Cursors::Default;
 	this->tabControl1->Location = System::Drawing::Point(4, 9);
-	this->tabControl1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabControl1->Margin = System::Windows::Forms::Padding(2);
 	this->tabControl1->Name = L"tabControl1";
 	this->tabControl1->SelectedIndex = 0;
 	this->tabControl1->Size = System::Drawing::Size(587, 373);
@@ -81,9 +77,9 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->tabPage1->Controls->Add(this->button5);
 	this->tabPage1->Controls->Add(this->dataGridView1);
 	this->tabPage1->Location = System::Drawing::Point(4, 22);
-	this->tabPage1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabPage1->Margin = System::Windows::Forms::Padding(2);
 	this->tabPage1->Name = L"tabPage1";
-	this->tabPage1->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabPage1->Padding = System::Windows::Forms::Padding(2);
 	this->tabPage1->Size = System::Drawing::Size(579, 347);
 	this->tabPage1->TabIndex = 0;
 	this->tabPage1->Text = L"Afficher les articles";
@@ -92,7 +88,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// button5
 	// 
 	this->button5->Location = System::Drawing::Point(509, 18);
-	this->button5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->button5->Margin = System::Windows::Forms::Padding(2);
 	this->button5->Name = L"button5";
 	this->button5->Size = System::Drawing::Size(58, 302);
 	this->button5->TabIndex = 1;
@@ -102,45 +98,16 @@ void POO::ArticlePage::InitializeComponent(void)
 	// dataGridView1
 	// 
 	this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-	this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
-		this->Column1,
-			this->Column2, this->Column3, this->Column4
-	});
+	
 	this->dataGridView1->Location = System::Drawing::Point(16, 18);
-	this->dataGridView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
 	this->dataGridView1->Name = L"dataGridView1";
 	this->dataGridView1->RowHeadersWidth = 51;
 	this->dataGridView1->RowTemplate->Height = 24;
 	this->dataGridView1->Size = System::Drawing::Size(482, 310);
 	this->dataGridView1->TabIndex = 0;
-	// 
-	// Column1
-	// 
-	this->Column1->HeaderText = L"Nom";
-	this->Column1->MinimumWidth = 6;
-	this->Column1->Name = L"Column1";
-	this->Column1->Width = 125;
-	// 
-	// Column2
-	// 
-	this->Column2->HeaderText = L"Prix";
-	this->Column2->MinimumWidth = 6;
-	this->Column2->Name = L"Column2";
-	this->Column2->Width = 125;
-	// 
-	// Column3
-	// 
-	this->Column3->HeaderText = L"Description";
-	this->Column3->MinimumWidth = 6;
-	this->Column3->Name = L"Column3";
-	this->Column3->Width = 125;
-	// 
-	// Column4
-	// 
-	this->Column4->HeaderText = L"Quantité";
-	this->Column4->MinimumWidth = 6;
-	this->Column4->Name = L"Column4";
-	this->Column4->Width = 125;
+	this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ArticlePage::dataGridView1_CellContentClick);
+	
 	// 
 	// tabPage2
 	// 
@@ -155,9 +122,9 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->tabPage2->Controls->Add(this->label2);
 	this->tabPage2->Controls->Add(this->label1);
 	this->tabPage2->Location = System::Drawing::Point(4, 22);
-	this->tabPage2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabPage2->Margin = System::Windows::Forms::Padding(2);
 	this->tabPage2->Name = L"tabPage2";
-	this->tabPage2->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabPage2->Padding = System::Windows::Forms::Padding(2);
 	this->tabPage2->Size = System::Drawing::Size(579, 347);
 	this->tabPage2->TabIndex = 1;
 	this->tabPage2->Text = L"Ajouter un article";
@@ -166,7 +133,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// button4
 	// 
 	this->button4->Location = System::Drawing::Point(19, 289);
-	this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->button4->Margin = System::Windows::Forms::Padding(2);
 	this->button4->Name = L"button4";
 	this->button4->Size = System::Drawing::Size(544, 44);
 	this->button4->TabIndex = 10;
@@ -176,7 +143,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// richTextBox1
 	// 
 	this->richTextBox1->Location = System::Drawing::Point(18, 112);
-	this->richTextBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->richTextBox1->Margin = System::Windows::Forms::Padding(2);
 	this->richTextBox1->Name = L"richTextBox1";
 	this->richTextBox1->Size = System::Drawing::Size(546, 161);
 	this->richTextBox1->TabIndex = 9;
@@ -187,7 +154,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->numericUpDown2->DecimalPlaces = 2;
 	this->numericUpDown2->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 65536 });
 	this->numericUpDown2->Location = System::Drawing::Point(386, 45);
-	this->numericUpDown2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->numericUpDown2->Margin = System::Windows::Forms::Padding(2);
 	this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
 	this->numericUpDown2->Name = L"numericUpDown2";
 	this->numericUpDown2->Size = System::Drawing::Size(177, 20);
@@ -196,7 +163,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// numericUpDown1
 	// 
 	this->numericUpDown1->Location = System::Drawing::Point(284, 44);
-	this->numericUpDown1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->numericUpDown1->Margin = System::Windows::Forms::Padding(2);
 	this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
 	this->numericUpDown1->Name = L"numericUpDown1";
 	this->numericUpDown1->Size = System::Drawing::Size(28, 20);
@@ -205,7 +172,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// textBox1
 	// 
 	this->textBox1->Location = System::Drawing::Point(18, 44);
-	this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->textBox1->Margin = System::Windows::Forms::Padding(2);
 	this->textBox1->Name = L"textBox1";
 	this->textBox1->Size = System::Drawing::Size(200, 20);
 	this->textBox1->TabIndex = 5;
@@ -271,9 +238,9 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->tabPage3->Controls->Add(this->label7);
 	this->tabPage3->Controls->Add(this->label6);
 	this->tabPage3->Location = System::Drawing::Point(4, 22);
-	this->tabPage3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabPage3->Margin = System::Windows::Forms::Padding(2);
 	this->tabPage3->Name = L"tabPage3";
-	this->tabPage3->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabPage3->Padding = System::Windows::Forms::Padding(2);
 	this->tabPage3->Size = System::Drawing::Size(579, 347);
 	this->tabPage3->TabIndex = 2;
 	this->tabPage3->Text = L"Modifier un article";
@@ -282,7 +249,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// button3
 	// 
 	this->button3->Location = System::Drawing::Point(18, 296);
-	this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->button3->Margin = System::Windows::Forms::Padding(2);
 	this->button3->Name = L"button3";
 	this->button3->Size = System::Drawing::Size(546, 41);
 	this->button3->TabIndex = 8;
@@ -294,7 +261,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->numericUpDown4->DecimalPlaces = 2;
 	this->numericUpDown4->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 	this->numericUpDown4->Location = System::Drawing::Point(408, 39);
-	this->numericUpDown4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->numericUpDown4->Margin = System::Windows::Forms::Padding(2);
 	this->numericUpDown4->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
 	this->numericUpDown4->Name = L"numericUpDown4";
 	this->numericUpDown4->Size = System::Drawing::Size(157, 20);
@@ -303,7 +270,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// numericUpDown3
 	// 
 	this->numericUpDown3->Location = System::Drawing::Point(278, 39);
-	this->numericUpDown3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->numericUpDown3->Margin = System::Windows::Forms::Padding(2);
 	this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
 	this->numericUpDown3->Name = L"numericUpDown3";
 	this->numericUpDown3->Size = System::Drawing::Size(36, 20);
@@ -312,7 +279,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// textBox2
 	// 
 	this->textBox2->Location = System::Drawing::Point(14, 39);
-	this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->textBox2->Margin = System::Windows::Forms::Padding(2);
 	this->textBox2->Name = L"textBox2";
 	this->textBox2->Size = System::Drawing::Size(237, 20);
 	this->textBox2->TabIndex = 5;
@@ -320,7 +287,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// richTextBox2
 	// 
 	this->richTextBox2->Location = System::Drawing::Point(18, 109);
-	this->richTextBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->richTextBox2->Margin = System::Windows::Forms::Padding(2);
 	this->richTextBox2->Name = L"richTextBox2";
 	this->richTextBox2->Size = System::Drawing::Size(549, 172);
 	this->richTextBox2->TabIndex = 4;
@@ -372,9 +339,9 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->tabPage4->Controls->Add(this->textBox3);
 	this->tabPage4->Controls->Add(this->label10);
 	this->tabPage4->Location = System::Drawing::Point(4, 22);
-	this->tabPage4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabPage4->Margin = System::Windows::Forms::Padding(2);
 	this->tabPage4->Name = L"tabPage4";
-	this->tabPage4->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->tabPage4->Padding = System::Windows::Forms::Padding(2);
 	this->tabPage4->Size = System::Drawing::Size(579, 347);
 	this->tabPage4->TabIndex = 3;
 	this->tabPage4->Text = L"Supprimer Article";
@@ -383,7 +350,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// button1
 	// 
 	this->button1->Location = System::Drawing::Point(359, 23);
-	this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->button1->Margin = System::Windows::Forms::Padding(2);
 	this->button1->Name = L"button1";
 	this->button1->Size = System::Drawing::Size(189, 39);
 	this->button1->TabIndex = 2;
@@ -393,7 +360,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// textBox3
 	// 
 	this->textBox3->Location = System::Drawing::Point(14, 45);
-	this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->textBox3->Margin = System::Windows::Forms::Padding(2);
 	this->textBox3->Name = L"textBox3";
 	this->textBox3->Size = System::Drawing::Size(236, 20);
 	this->textBox3->TabIndex = 1;
@@ -412,7 +379,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	// 
 	this->button2->BackColor = System::Drawing::SystemColors::Control;
 	this->button2->Location = System::Drawing::Point(456, 7);
-	this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->button2->Margin = System::Windows::Forms::Padding(2);
 	this->button2->Name = L"button2";
 	this->button2->Size = System::Drawing::Size(128, 20);
 	this->button2->TabIndex = 1;
@@ -427,7 +394,7 @@ void POO::ArticlePage::InitializeComponent(void)
 	this->ClientSize = System::Drawing::Size(600, 406);
 	this->Controls->Add(this->button2);
 	this->Controls->Add(this->tabControl1);
-	this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+	this->Margin = System::Windows::Forms::Padding(2);
 	this->Name = L"ArticlePage";
 	this->Text = L"ArticlePage";
 	this->Load += gcnew System::EventHandler(this, &ArticlePage::ArticlePage_Load);
@@ -455,4 +422,11 @@ System::Void POO::ArticlePage::button2_Click(System::Object^ sender, System::Eve
 	AdminPage^ adminPage = gcnew AdminPage();
 	adminPage->ShowDialog();
 	this->Close();
+}
+
+System::Void POO::ArticlePage::button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oDs = this->oSvc->selection_tout_article("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+	this->dataGridView1->Refresh();
 }

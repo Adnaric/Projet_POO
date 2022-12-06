@@ -17,6 +17,7 @@ namespace NS_Comp_Mappage
         System::String^ rue;
         System::String^ ville;
         int code_postal;
+        int id_personnel;
     public:
         System::String^ Select(void);
         System::String^ Insert(void);
@@ -30,6 +31,7 @@ namespace NS_Comp_Mappage
         void set_rue(System::String^);
         void set_ville(System::String^);
         void set_code_postal(int);
+        void set_personnel(int);
         System::String^ getNom_pers(void);
         System::String^ getPrenom_pers(void);
         int get_superieur(void);
@@ -38,6 +40,7 @@ namespace NS_Comp_Mappage
         System::String^ get_rue(void);
         System::String^ get_ville(void);
         int get_code_postal(void);
+        int get_id_personnel(void);
 
     };
     ref class CLmapClient {

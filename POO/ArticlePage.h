@@ -1,5 +1,5 @@
 #pragma once
-
+#include "CLservices.h"
 namespace POO {
 
 	using namespace System;
@@ -32,11 +32,7 @@ namespace POO {
 		System::Windows::Forms::Button^ button4;
 		
 		System::Windows::Forms::DataGridView^ dataGridView1;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
-		System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
-		
+
 		System::Windows::Forms::RichTextBox^ richTextBox1;
 		System::Windows::Forms::RichTextBox^ richTextBox2;
 		
@@ -61,11 +57,17 @@ namespace POO {
 		System::Windows::Forms::Label^ label10;
 		
 		System::ComponentModel::Container ^components;
+	private: NS_Comp_Svc::CLservices^ oSvc;
+	private: System::Data::DataSet^ oDs;
+
 		
 		#pragma region Windows Form Designer generated code
 		void InitializeComponent(void);
 		#pragma endregion
 		System::Void ArticlePage_Load(System::Object^ sender, System::EventArgs^ e);
 		System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
 	};
 }

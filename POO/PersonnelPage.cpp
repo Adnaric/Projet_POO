@@ -166,6 +166,7 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->button1->TabIndex = 0;
 	this->button1->Text = L"Ajouter le personnel";
 	this->button1->UseVisualStyleBackColor = true;
+	this->button6->Click += gcnew System::EventHandler(this, &PersonnelPage::button1_Click);
 	// 
 	// label1
 	// 
@@ -597,7 +598,22 @@ System::Void POO::PersonnelPage::button6_Click(System::Object^ sender, System::E
 	this->dataGridView1->Refresh();
 }
 
+
+System::Void POO::PersonnelPage::button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	int Sup = Convert::ToInt32(this->textBox3->Text);
+	int num = Convert::ToInt32(this->textBox4->Text);
+	int code = Convert::ToInt32(this->textBox7->Text);
+	this->oSvc->ajouter_personnel(this->textBox1->Text, this->textBox2->Text, Sup, this->monthCalendar1->Text, num, this->textBox5->Text, this->textBox6->Text, code);
+}
 System::Void POO::PersonnelPage::dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e)
 {
 	return System::Void();
 }
+
+System::Void POO::PersonnelPage::button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	int id = Convert::ToInt32(this->textBox16->Text);
+	this->oSvc->supprimer_personnel(id);
+}
+
+

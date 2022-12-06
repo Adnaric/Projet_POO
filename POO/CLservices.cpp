@@ -112,3 +112,13 @@ void NS_Comp_Svc::CLservices::ajouter_commande(int valeur_rem, System::String^ n
 
 	this->oCad->actionRows(sql);
 }
+
+void NS_Comp_Svc::CLservices::supprimer_personnel(int id_perso)
+{
+	System::String^ sql;
+	this->oMappPersonnel->set_personnel(id_perso);
+	sql = this->oMappPersonnel->Delete();
+
+	this->oCad->actionRows(sql);
+}
+
