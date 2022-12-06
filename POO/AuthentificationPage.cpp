@@ -39,7 +39,7 @@ POO::AuthentificationPage::AuthentificationPage(void)
 	this->label1->Name = L"label1";
 	this->label1->Size = System::Drawing::Size(44, 16);
 	this->label1->TabIndex = 2;
-	this->label1->Text = L"Connextion";
+	this->label1->Text = L"Connection";
 	this->Controls->Add(this->label1);
 
 }
