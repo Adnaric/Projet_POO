@@ -119,7 +119,6 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->dataGridView1->RowHeadersWidth = 51;
 	this->dataGridView1->Size = System::Drawing::Size(659, 419);
 	this->dataGridView1->TabIndex = 0;
-	this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &PersonnelPage::dataGridView1_CellContentClick);
 	// 
 	// tabPage2
 	// 
@@ -422,7 +421,6 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->monthCalendar2->Location = System::Drawing::Point(17, 258);
 	this->monthCalendar2->Name = L"monthCalendar2";
 	this->monthCalendar2->TabIndex = 18;
-	this->monthCalendar2->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &PersonnelPage::monthCalendar1_DateChanged);
 	// 
 	// label14
 	// 
@@ -555,17 +553,6 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->Name = L"PersonnelPage";
 	this->Text = L"PersonnelPage";
 	this->Load += gcnew System::EventHandler(this, &PersonnelPage::PersonnelPage_Load);
-	this->tabControl1->ResumeLayout(false);
-	this->tabPage1->ResumeLayout(false);
-	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-	this->tabPage2->ResumeLayout(false);
-	this->tabPage2->PerformLayout();
-	this->tabPage3->ResumeLayout(false);
-	this->tabPage3->PerformLayout();
-	this->tabPage4->ResumeLayout(false);
-	this->tabPage4->PerformLayout();
-	this->ResumeLayout(false);
-
 }
 
 System::Void POO::PersonnelPage::PersonnelPage_Load(System::Object^ sender, System::EventArgs^ e){
@@ -585,12 +572,6 @@ System::Void POO::PersonnelPage::button5_Click(System::Object^ sender, System::E
 	this->Close();
 }
 
-System::Void POO::PersonnelPage::monthCalendar1_DateChanged(System::Object^ sender, System::Windows::Forms::DateRangeEventArgs^ e)
-{
-	MessageBox::Show(this->monthCalendar2->SelectionStart.ToString("dd/MM/yyyy"));
-}
-
-
 System::Void POO::PersonnelPage::button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oDs = this->oSvc->selection_tout_personnel("Rsl");
 	this->dataGridView1->DataSource = this->oDs;
@@ -598,17 +579,11 @@ System::Void POO::PersonnelPage::button6_Click(System::Object^ sender, System::E
 	this->dataGridView1->Refresh();
 }
 
-
 System::Void POO::PersonnelPage::button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
 	int Sup = Convert::ToInt32(this->textBox3->Text);
 	int num = Convert::ToInt32(this->textBox4->Text);
 	int code = Convert::ToInt32(this->textBox7->Text);
 	this->oSvc->ajouter_personnel(this->textBox1->Text, this->textBox2->Text, Sup, this->monthCalendar1->Text, num, this->textBox5->Text, this->textBox6->Text, code);
-}
-System::Void POO::PersonnelPage::dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e)
-{
-	return System::Void();
 }
 
 System::Void POO::PersonnelPage::button4_Click(System::Object^ sender, System::EventArgs^ e) {

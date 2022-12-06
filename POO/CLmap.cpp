@@ -10,7 +10,7 @@ System::String^ NS_Comp_Mappage::CLmapPersonnel::Insert(void)
 }
 System::String^ NS_Comp_Mappage::CLmapPersonnel::Delete(void)
 {
-    return "DELETE FROM PERSONNEL WHERE personnel_id = "+this->id_personnel;
+    return "DELETE FROM PERSONNEL WHERE personnel_id = " + this->id_personnel + ";";
 }
 System::String^ NS_Comp_Mappage::CLmapPersonnel::Update(void)
 {
@@ -113,7 +113,7 @@ int NS_Comp_Mappage::CLmapPersonnel::get_id_personnel(void)
 
 System::String^ NS_Comp_Mappage::CLmapClient::Select()
 {
-    return "SELECT personnel_id, humain_nom, humain_prenom, personnel_id_1, adresse_numero, adresse_rue, ville_name, ville_code_postal, calendrier_date  FROM [projetpoo2].[dbo].[humain], [projetpoo2].[dbo].[ADRESSE], [projetpoo2].[dbo].[personnel], [projetpoo2].[dbo].[calendrier], [projetpoo2].[dbo].[VILLE] WHERE PERSONNEL.calendrier_id = CALENDRIER.calendrier_id AND PERSONNEL.adresse_id = ADRESSE.adresse_id AND PERSONNEL.humain_id = HUMAIN.humain_id AND ADRESSE.ville_id = VILLE.ville_id";
+	return "";
 }
 System::String^ NS_Comp_Mappage::CLmapClient::Insert(void)
 {
@@ -252,7 +252,7 @@ int NS_Comp_Mappage::CLmapClient::get_code_postal(void)
 
 System::String^ NS_Comp_Mappage::CLmapArticle::Select()
 {
-    return "SELECT personnel_id, humain_nom, humain_prenom, personnel_id_1, adresse_numero, adresse_rue, ville_name, ville_code_postal, calendrier_date  FROM [projetpoo2].[dbo].[humain], [projetpoo2].[dbo].[ADRESSE], [projetpoo2].[dbo].[personnel], [projetpoo2].[dbo].[calendrier], [projetpoo2].[dbo].[VILLE] WHERE PERSONNEL.calendrier_id = CALENDRIER.calendrier_id AND PERSONNEL.adresse_id = ADRESSE.adresse_id AND PERSONNEL.humain_id = HUMAIN.humain_id AND ADRESSE.ville_id = VILLE.ville_id";
+    return "";
 }
 System::String^ NS_Comp_Mappage::CLmapArticle::Insert(void)
 {
@@ -317,7 +317,7 @@ int NS_Comp_Mappage::CLmapArticle::get_quantite(void)
 
 System::String^ NS_Comp_Mappage::CLmapCommande::Select()
 {
-    return "SELECT personnel_id, humain_nom, humain_prenom, personnel_id_1, adresse_numero, adresse_rue, ville_name, ville_code_postal, calendrier_date  FROM [projetpoo2].[dbo].[humain], [projetpoo2].[dbo].[ADRESSE], [projetpoo2].[dbo].[personnel], [projetpoo2].[dbo].[calendrier], [projetpoo2].[dbo].[VILLE] WHERE PERSONNEL.calendrier_id = CALENDRIER.calendrier_id AND PERSONNEL.adresse_id = ADRESSE.adresse_id AND PERSONNEL.humain_id = HUMAIN.humain_id AND ADRESSE.ville_id = VILLE.ville_id";
+	return "";
 }
 System::String^ NS_Comp_Mappage::CLmapCommande::Insert(void)
 {

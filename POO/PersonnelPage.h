@@ -81,10 +81,10 @@ namespace POO {
 		System::Void PersonnelPage_Load(System::Object^ sender, System::EventArgs^ e);		
 		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
 		
-		System::Void monthCalendar1_DateChanged(System::Object^ sender, System::Windows::Forms::DateRangeEventArgs^ e);
 		System::Void button6_Click(System::Object^ sender, System::EventArgs^ e);
 		System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 		System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
-		System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+		em::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
 	};
 }
