@@ -4,6 +4,7 @@
 #include "ArticlePage.h"
 #include "ClientPage.h"
 #include "StatsPage.h"
+#include "CommandePage.h"
 
 void POO::AdminPage::InitializeComponent(void)
 {
@@ -157,7 +158,12 @@ System::Void POO::AdminPage::button2_Click(System::Object^ sender, System::Event
 
 System::Void POO::AdminPage::button4_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	return System::Void();
+	this->Hide();
+
+	CommandePage^ commandePage = gcnew CommandePage();
+	commandePage->ShowDialog();
+
+	this->Close();
 }
 
 System::Void POO::AdminPage::button3_Click(System::Object^ sender, System::EventArgs^ e)
@@ -179,3 +185,5 @@ System::Void POO::AdminPage::button6_Click(System::Object^ sender, System::Event
 
 	this->Close();
 }
+
+

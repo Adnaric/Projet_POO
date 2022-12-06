@@ -30,6 +30,7 @@ POO::AuthentificationPage::AuthentificationPage(void)
 	this->button2->TabIndex = 1;
 	this->button2->Text = L"Personnel";
 	this->button2->UseVisualStyleBackColor = true;
+	this->button2->Click += gcnew System::EventHandler(this, &AuthentificationPage::button2_Click);
 	this->Controls->Add(this->button2);
 	// 
 	// label1
