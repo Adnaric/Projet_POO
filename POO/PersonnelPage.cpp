@@ -19,6 +19,7 @@ void POO::PersonnelPage::InitializeComponent(void)
 {
 	this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 	this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+	this->button6 = (gcnew System::Windows::Forms::Button());
 	this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 	this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 	this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -27,6 +28,7 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 	this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 	this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+	this->label20 = (gcnew System::Windows::Forms::Label());
 	this->button1 = (gcnew System::Windows::Forms::Button());
 	this->label1 = (gcnew System::Windows::Forms::Label());
 	this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -45,6 +47,7 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->label8 = (gcnew System::Windows::Forms::Label());
 	this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 	this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+	this->label21 = (gcnew System::Windows::Forms::Label());
 	this->label9 = (gcnew System::Windows::Forms::Label());
 	this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 	this->button2 = (gcnew System::Windows::Forms::Button());
@@ -70,9 +73,6 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->textBox16 = (gcnew System::Windows::Forms::TextBox());
 	this->button4 = (gcnew System::Windows::Forms::Button());
 	this->button5 = (gcnew System::Windows::Forms::Button());
-	this->button6 = (gcnew System::Windows::Forms::Button());
-	this->label20 = (gcnew System::Windows::Forms::Label());
-	this->label21 = (gcnew System::Windows::Forms::Label());
 	this->tabControl1->SuspendLayout();
 	this->tabPage1->SuspendLayout();
 	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
@@ -105,6 +105,16 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->tabPage1->Text = L"Liste du personnel";
 	this->tabPage1->UseVisualStyleBackColor = true;
 	// 
+	// button6
+	// 
+	this->button6->Location = System::Drawing::Point(672, 12);
+	this->button6->Name = L"button6";
+	this->button6->Size = System::Drawing::Size(63, 418);
+	this->button6->TabIndex = 1;
+	this->button6->Text = L"Raffraichir";
+	this->button6->UseVisualStyleBackColor = true;
+	this->button6->Click += gcnew System::EventHandler(this, &PersonnelPage::button6_Click);
+	// 
 	// dataGridView1
 	// 
 	this->dataGridView1->AllowUserToOrderColumns = true;
@@ -119,6 +129,7 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->dataGridView1->RowHeadersWidth = 51;
 	this->dataGridView1->Size = System::Drawing::Size(659, 419);
 	this->dataGridView1->TabIndex = 0;
+	this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &PersonnelPage::dataGridView1_CellContentClick);
 	// 
 	// Column6
 	// 
@@ -195,6 +206,15 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->tabPage2->TabIndex = 1;
 	this->tabPage2->Text = L"Ajouter un personnel";
 	this->tabPage2->UseVisualStyleBackColor = true;
+	// 
+	// label20
+	// 
+	this->label20->AutoSize = true;
+	this->label20->Location = System::Drawing::Point(568, 21);
+	this->label20->Name = L"label20";
+	this->label20->Size = System::Drawing::Size(45, 13);
+	this->label20->TabIndex = 17;
+	this->label20->Text = L"Adresse";
 	// 
 	// button1
 	// 
@@ -362,6 +382,15 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->tabPage3->TabIndex = 2;
 	this->tabPage3->Text = L"Modifier un personnel";
 	this->tabPage3->UseVisualStyleBackColor = true;
+	// 
+	// label21
+	// 
+	this->label21->AutoSize = true;
+	this->label21->Location = System::Drawing::Point(563, 94);
+	this->label21->Name = L"label21";
+	this->label21->Size = System::Drawing::Size(45, 13);
+	this->label21->TabIndex = 21;
+	this->label21->Text = L"Adresse";
 	// 
 	// label9
 	// 
@@ -573,34 +602,6 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->button5->UseVisualStyleBackColor = true;
 	this->button5->Click += gcnew System::EventHandler(this, &PersonnelPage::button5_Click);
 	// 
-	// button6
-	// 
-	this->button6->Location = System::Drawing::Point(672, 12);
-	this->button6->Name = L"button6";
-	this->button6->Size = System::Drawing::Size(63, 418);
-	this->button6->TabIndex = 1;
-	this->button6->Text = L"Raffraichir";
-	this->button6->UseVisualStyleBackColor = true;
-	this->button6->Click += gcnew System::EventHandler(this, &PersonnelPage::button6_Click);
-	// 
-	// label20
-	// 
-	this->label20->AutoSize = true;
-	this->label20->Location = System::Drawing::Point(568, 21);
-	this->label20->Name = L"label20";
-	this->label20->Size = System::Drawing::Size(45, 13);
-	this->label20->TabIndex = 17;
-	this->label20->Text = L"Adresse";
-	// 
-	// label21
-	// 
-	this->label21->AutoSize = true;
-	this->label21->Location = System::Drawing::Point(563, 94);
-	this->label21->Name = L"label21";
-	this->label21->Size = System::Drawing::Size(45, 13);
-	this->label21->TabIndex = 21;
-	this->label21->Text = L"Adresse";
-	// 
 	// PersonnelPage
 	// 
 	this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -640,4 +641,12 @@ System::Void POO::PersonnelPage::button5_Click(System::Object^ sender, System::E
 System::Void POO::PersonnelPage::monthCalendar1_DateChanged(System::Object^ sender, System::Windows::Forms::DateRangeEventArgs^ e)
 {
 	MessageBox::Show(this->monthCalendar2->SelectionStart.ToString("dd/MM/yyyy"));
+}
+
+
+System::Void POO::PersonnelPage::button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oDs = this->oSvc->selection_tout_personnel("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
 }

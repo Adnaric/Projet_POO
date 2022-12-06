@@ -18,6 +18,8 @@ namespace POO {
 		~PersonnelPage();
 		
 	private: 
+		NS_Comp_Svc::CLservices^ oSvc;
+		System::Data::DataSet^ oDs;
 		System::Windows::Forms::TabControl^ tabControl1;
 		System::Windows::Forms::TabPage^ tabPage1;
 		System::Windows::Forms::DataGridView^ dataGridView1;
@@ -88,6 +90,8 @@ namespace POO {
 		
 		System::Void monthCalendar1_DateChanged(System::Object^ sender, System::Windows::Forms::DateRangeEventArgs^ e);
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
 	};
 }
