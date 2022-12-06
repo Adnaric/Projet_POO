@@ -650,3 +650,8 @@ System::Void POO::PersonnelPage::button6_Click(System::Object^ sender, System::E
 	this->dataGridView1->DataSource = this->oDs;
 	this->dataGridView1->DataMember = "Rsl";
 }
+
+System::Void POO::PersonnelPage::dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e)
+{
+	return System::Void();
+}

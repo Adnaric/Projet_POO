@@ -74,7 +74,6 @@ namespace POO {
 		System::Windows::Forms::Button^ button4;
 		System::Windows::Forms::TextBox^ textBox16;
 		System::Windows::Forms::Button^ button5;
-		NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Label^ label21;
@@ -89,9 +88,7 @@ namespace POO {
 		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
 		
 		System::Void monthCalendar1_DateChanged(System::Object^ sender, System::Windows::Forms::DateRangeEventArgs^ e);
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	}
+		System::Void button6_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
 	};
 }

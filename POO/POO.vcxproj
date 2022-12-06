@@ -125,6 +125,7 @@
     <ClCompile Include="CLservices.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PersonnelPage.cpp" />
+    <ClCompile Include="StatsPage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -152,6 +153,9 @@
     <ClInclude Include="PersonnelPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="StatsPage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AdminPage.resx">
@@ -168,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonnelPage.resx">
       <DependentUpon>PersonnelPage.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsPage.resx">
+      <DependentUpon>StatsPage.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

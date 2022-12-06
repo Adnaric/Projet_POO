@@ -26,9 +26,10 @@ namespace POO {
 		System::Windows::Forms::Button^ button3;
 		System::Windows::Forms::Button^ button4;
 		System::Windows::Forms::Button^ button5;
-		
+		System::Windows::Forms::Button^ button6;
+
 		System::Windows::Forms::Label^ label1;
-		
+
 		System::ComponentModel::Container^ components;
 
 		#pragma region Windows Form Designer generated code
@@ -41,5 +42,6 @@ namespace POO {
 		System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 		System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
 		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button6_Click(System::Object^ sender, System::EventArgs^ e);
 	};
 }

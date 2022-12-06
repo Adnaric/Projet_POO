@@ -101,5 +101,7 @@ namespace POO {
 		#pragma endregion
 		System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 	
+	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
 	};
 }

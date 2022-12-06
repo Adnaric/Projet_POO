@@ -45,6 +45,9 @@
     <ClCompile Include="ClientPage.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="StatsPage.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AuthentificationPage.h">
@@ -69,6 +72,9 @@
       <Filter>Views</Filter>
     </ClInclude>
     <ClInclude Include="ClientPage.h">
+      <Filter>Views</Filter>
+    </ClInclude>
+    <ClInclude Include="StatsPage.h">
       <Filter>Views</Filter>
     </ClInclude>
   </ItemGroup>
