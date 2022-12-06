@@ -531,6 +531,7 @@ void POO::PersonnelPage::InitializeComponent(void)
 	this->button4->Size = System::Drawing::Size(433, 79);
 	this->button4->TabIndex = 2;
 	this->button4->Text = L"Supprimer";
+	this->button4->Click += gcnew System::EventHandler(this, &PersonnelPage::button4_Click);
 	this->button4->UseVisualStyleBackColor = true;
 	// 
 	// button5
@@ -590,5 +591,3 @@ System::Void POO::PersonnelPage::button4_Click(System::Object^ sender, System::E
 	int id = Convert::ToInt32(this->textBox16->Text);
 	this->oSvc->supprimer_personnel(id);
 }
-
-
